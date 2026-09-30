@@ -85,8 +85,3 @@ exit
   ```
 - **원인**: Client는 named pipe를 통해 엔진에 명령을 보내는데, Docker 엔진(데몬)이 실행되지 않아 pipe가 존재하지 않음
 - **해결**: Docker Desktop 실행 후 **Engine running** 확인, 다시 `docker version`
-
-### PowerShell 시작 위치가 System32
-- **증상**: PowerShell을 열면 `C:\WINDOWS\system32`에서 시작
-- **원인**: 관리자 권한 실행 시 보안상 시스템 폴더에서 시작하도록 되어 있거나, 터미널 프로필의 시작 디렉터리 설정 때문
-- **해결**: Windows Terminal 설정 → 프로필(Windows PowerShell) → 시작 디렉터리를 `%USERPROFILE%`로 변경. 또는 작업 전 `cd ~`
